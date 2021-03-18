@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <logger name="software.amazon.awssdk" level="INFO"/>
+    <logger name="software.amazon.kinesis" level="INFO"/>
+    <logger name="software.amazon.kinesis.coordinator.Scheduler" level="INFO"/>
+    <logger name="software.amazon.kinesis.lifecycle.ProcessTask" level="INFO"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%X{trace-id}] [%thread] %-5level %logger{36} - %msg - MDC[%mdc] %n</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
